@@ -18,4 +18,23 @@ Identifiers
     %0 = add i32 %X, %X           ; yields i32:%0  
     %1 = add i32 %0, %0           ; yields i32:%1  
     %result = add i32 %1, %1
-    
+
+
+High Level Structure
+=========
+Module Structure
+-------
+>Each module consists of functions, global variables, and symbol table entries.  
+
+Linkage Types
+------
++ private:只有目前module可存取不，顯示在symbol table上(This doesn’t show up in any symbol table in the object file.)
++ internal:跟private功能差不多 類似C的static
++ available_externally
++ linkonce
++ weak
++ common
++ appending
++ extern_weak
++ linkonce_odr, weak_odr
++ external
